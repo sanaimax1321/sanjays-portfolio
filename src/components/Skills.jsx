@@ -2,32 +2,45 @@ import React, { useState } from "react";
 import FloatingSkill from "./FloatingSkill";
 import { motion, AnimatePresence } from "framer-motion";
 
+// Correct imports
+import pythonIcon from "../assets/skills/python.jpeg";
+import pytorchIcon from "../assets/skills/pytorch.png";
+import cIcon from "../assets/skills/C.png";
+import mongodbIcon from "../assets/skills/mongodb.png";
+import sqlIcon from "../assets/skills/SQL.png";
+import cvIcon from "../assets/skills/cv.png";
+import fastapiIcon from "../assets/skills/Fastapi.png";
+import htmlIcon from "../assets/skills/html.png";
+import jupyterIcon from "../assets/skills/jupyter.png";
+import numpyIcon from "../assets/skills/Numpy.png";
+import streamlitIcon from "../assets/skills/streamlit.png";
+import vscodeIcon from "../assets/skills/vs.jpeg";
+import pandasIcon from "../assets/skills/pandas.png";
+import mlIcon from "../assets/skills/ml.jpeg";
+import matplotlibIcon from "../assets/skills/Matplot.png";
+
 export default function Skills() {
-  // Skill list with icons
   const skills = [
-    { id: 1, label: "Python", pct: 85, icon: "/src/assets/skills/python.jpeg" },
-    { id: 2, label: "PyTorch", pct: 50, icon: "/src/assets/skills/pytorch.png" },
-    { id: 3, label: "C", pct: 75, icon: "/src/assets/skills/C.png" },
-    { id: 4, label: "MongoDB", pct: 70, icon: "/src/assets/skills/mongodb.png" },
-    { id: 5, label: "SQL", pct: 80, icon: "/src/assets/skills/SQL.png" },
-    { id: 6, label: "Computer Vision", pct: 75, icon: "/src/assets/skills/cv.png" },
-    { id: 7, label: "FastAPI", pct: 78, icon: "/src/assets/skills/Fastapi.png" },
-    { id: 8, label: "HTML", pct: 65, icon: "/src/assets/skills/html.png" },
-    { id: 9, label: "Jupyter", pct: 65, icon: "/src/assets/skills/jupyter.png" },
-    { id: 10, label: "NumPy", pct: 65, icon: "/src/assets/skills/Numpy.png" },
-    { id: 11, label: "Streamlit", pct: 65, icon: "/src/assets/skills/streamlit.png" },
-    { id: 12, label: "VS Code", pct: 65, icon: "/src/assets/skills/vs.jpeg" },
-    { id: 13, label: "Pandas", pct: 65, icon: "/src/assets/skills/pandas.png" },
-    { id: 14, label: "Machine Learning", pct: 80, icon: "/src/assets/skills/ML.jpeg" },
-    { id: 15, label: "Matplotlib", pct: 65, icon: "/src/assets/skills/matplot.png" },
+    { id: 1, label: "Python", pct: 85, icon: pythonIcon },
+    { id: 2, label: "PyTorch", pct: 50, icon: pytorchIcon },
+    { id: 3, label: "C", pct: 75, icon: cIcon },
+    { id: 4, label: "MongoDB", pct: 70, icon: mongodbIcon },
+    { id: 5, label: "SQL", pct: 80, icon: sqlIcon },
+    { id: 6, label: "Computer Vision", pct: 75, icon: cvIcon },
+    { id: 7, label: "FastAPI", pct: 78, icon: fastapiIcon },
+    { id: 8, label: "HTML", pct: 65, icon: htmlIcon },
+    { id: 9, label: "Jupyter", pct: 65, icon: jupyterIcon },
+    { id: 10, label: "NumPy", pct: 65, icon: numpyIcon },
+    { id: 11, label: "Streamlit", pct: 65, icon: streamlitIcon },
+    { id: 12, label: "VS Code", pct: 65, icon: vscodeIcon },
+    { id: 13, label: "Pandas", pct: 65, icon: pandasIcon },
+    { id: 14, label: "Machine Learning", pct: 80, icon: mlIcon },
+    { id: 15, label: "Matplotlib", pct: 65, icon: matplotlibIcon },
   ];
 
-  // Spread icons in 3 rows
   const positions = [
     { x: 10, y: 15 }, { x: 30, y: 15 }, { x: 50, y: 15 }, { x: 70, y: 15 }, { x: 90, y: 15 },
-
     { x: 15, y: 50 }, { x: 35, y: 50 }, { x: 55, y: 50 }, { x: 75, y: 50 }, { x: 95, y: 50 },
-
     { x: 10, y: 85 }, { x: 30, y: 85 }, { x: 50, y: 85 }, { x: 70, y: 85 }, { x: 90, y: 85 },
   ];
 
@@ -35,25 +48,18 @@ export default function Skills() {
 
   return (
     <section id="skills" className="mt-20 max-w-6xl mx-auto px-4">
-      
       {/* Heading */}
       <div className="text-center space-y-4">
         <h2 className="text-4xl font-extrabold text-white">Skills</h2>
-        <p className="text-slate-400">
-          Hover and click a skill bubble to see proficiency.
-        </p>
+        <p className="text-slate-400">Hover and click a skill bubble to see proficiency.</p>
       </div>
 
       {/* Floating Skill Box */}
       <div className="mt-10 relative">
-        <div
-          className="relative rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl overflow-hidden shadow-xl"
-        >
-          {/* Fixed height container */}
+        <div className="relative rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl overflow-hidden shadow-xl">
           <div className="relative w-full h-[480px]">
             {skills.map((skill, i) => {
-              const pos = positions[i % positions.length];
-
+              const pos = positions[i];
               return (
                 <div
                   key={skill.id}
@@ -85,13 +91,8 @@ export default function Skills() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            {/* Overlay */}
-            <div
-              className="absolute inset-0 bg-black/60"
-              onClick={() => setOpenSkill(null)}
-            />
+            <div className="absolute inset-0 bg-black/60" onClick={() => setOpenSkill(null)} />
 
-            {/* Modal box */}
             <motion.div
               className="relative z-10 w-11/12 max-w-md rounded-2xl p-6 bg-white/10 border border-white/20 backdrop-blur-xl shadow-2xl"
               initial={{ y: 40, opacity: 0 }}
@@ -131,24 +132,24 @@ export default function Skills() {
   );
 }
 
-/* Descriptions */
+/* Skill Descriptions */
 function getSkillDescription(label) {
   const map = {
     Python: "Python for ML, CV, data processing, automation, and deep learning workflows.",
     PyTorch: "Deep learning model development, training loops, optimizers, and model deployment.",
     C: "C for embedded, system programming, and performance-sensitive logic.",
-    MongoDB: "Used for NoSQL applications, flexible document storage.",
-    SQL: "Proficient in database design, queries, joins, indexing, optimization.",
-    "Computer Vision": "OpenCV, YOLO, VGG, ResNet, segmentation, detection, preprocessing.",
-    FastAPI: "Building ML APIs, high-speed backend services, and model serving.",
-    HTML: "Frontend basics, dashboards, and UI for ML apps.",
-    Jupyter: "Research, visualizations, training logs, prototyping.",
-    NumPy: "Numerical computing, tensors, arrays, efficient vectorized operations.",
-    Streamlit: "ML dashboards, UI for models, rapid prototyping.",
-    "VS Code": "Primary IDE for development and debugging.",
-    Pandas: "Data cleaning, preprocessing, feature engineering.",
-    "Machine Learning": "Regression, classification, clustering, pipelines using sklearn.",
-    Matplotlib: "Visualizing training curves, data distributions, and results.",
+    MongoDB: "NoSQL document-based database for scalable apps.",
+    SQL: "Database design, queries, joins, indexing, optimization.",
+    "Computer Vision": "OpenCV, YOLO, segmentation, preprocessing, feature extraction.",
+    FastAPI: "High-speed backend, ML model serving, API development.",
+    HTML: "Web structure, dashboards, UI for ML tools.",
+    Jupyter: "Research workflows, visualizations, experimental logs.",
+    NumPy: "Numerical computing, arrays, matrix operations.",
+    Streamlit: "Real-time ML dashboards, interactive UIs.",
+    "VS Code": "Primary development IDE.",
+    Pandas: "Data cleaning, analysis, manipulation.",
+    "Machine Learning": "Regression, classification, clustering, feature engineering.",
+    Matplotlib: "Visualizations, plots, data exploration.",
   };
 
   return map[label] || "Experience working with this technology in AI/ML workflows.";
