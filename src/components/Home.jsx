@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
 import { ReactTyped } from "react-typed";
-import avatar from "../assets/Sanjay_S_image_2.jpg";
 
 export default function Home() {
   return (
@@ -42,10 +41,11 @@ export default function Home() {
         <div className="text-2xl md:text-3xl text-indigo-200 font-semibold">
           <ReactTyped
             strings={[
-              "AI & Machine Learning Engineer",
-              "Computer Vision Developer",
-              "Deep Learning Researcher",
-              "Transformer Model Builder",
+              "Machine Learning",
+              "Natural Language",
+              "Computer Vision",
+              "Deep Learning",
+              "Transformer",
             ]}
             typeSpeed={40}
             backSpeed={30}
@@ -83,48 +83,29 @@ export default function Home() {
         </div>
       </motion.div>
 
-      {/* RIGHT SIDE: PROFILE + MISSION & VISION STACKED */}
+      {/* RIGHT SIDE (MISSION + VISION) */}
       <motion.div
         initial={{ opacity: 0, x: 30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.9 }}
         className="flex flex-col items-center gap-10 relative z-10"
       >
-        {/* PROFILE IMAGE */}
-        <motion.div
-          whileHover={{ scale: 1.05, rotateY: 10, rotateX: 5 }}
-          transition={{ type: "spring", stiffness: 120 }}
-          className="relative"
-        >
-          <div className="absolute inset-0 w-64 h-64 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-500 blur-2xl opacity-40"></div>
+        {/* CENTERED BOX CONTAINER */}
+        <div className="flex flex-col items-center gap-6 w-full">
 
-          <div className="relative w-64 h-64 rounded-full p-1 bg-gradient-to-r from-indigo-500 to-cyan-500 shadow-2xl">
-            <img
-              src={avatar}
-              alt="Profile avatar"
-              className="w-full h-full object-cover rounded-full border-4 border-black/20 shadow-xl"
-            />
-          </div>
-        </motion.div>
-
-        {/* ⭐ MISSION & VISION FULL-WIDTH RECTANGLES */}
-        <div className="flex flex-col w-full max-w-md gap-6">
-
-          {/* Mission Box */}
-          <div className="w-full p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-indigo-500/20 hover:border-indigo-400/40 transition shadow-xl">
+          {/* Mission Box (centered, fixed width) */}
+          <div className="w-[90%] max-w-md p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-indigo-500/20 hover:border-indigo-400/40 transition shadow-xl">
             <h3 className="text-2xl font-bold text-white mb-2">Mission</h3>
             <p className="text-sm text-slate-300 leading-relaxed">
-              To build AI-powered solutions that transform industries,
-              enhance human capabilities, and create meaningful technological impact.
+              Empowering businesses and communities through innovative AI and machine learning applications.
             </p>
           </div>
 
-          {/* Vision Box (same size as Mission) */}
-          <div className="w-full p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-cyan-500/20 hover:border-cyan-400/40 transition shadow-xl">
+          {/* Vision Box — NOW PERFECTLY CENTERED BELOW MISSION */}
+          <div className="w-[90%] max-w-md p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-cyan-500/20 hover:border-cyan-400/40 transition shadow-xl">
             <h3 className="text-2xl font-bold text-white mb-2">Vision</h3>
             <p className="text-sm text-slate-300 leading-relaxed">
-              To become a global leader in AI innovation—creating intelligent systems
-              that shape the future of automation and smart technology.
+              To be a leading AI/ML innovator, shaping the future of intelligent technology for global impact.
             </p>
           </div>
 

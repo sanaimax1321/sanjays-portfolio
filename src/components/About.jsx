@@ -20,8 +20,7 @@ export default function About() {
           About Me
         </h2>
         <p className="text-slate-300 max-w-2xl mx-auto text-lg leading-relaxed">
-          A passionate AI/ML Engineer focused on building intelligent, scalable,
-          real–world systems using Deep Learning, Computer Vision, and Transformer-based models.
+          Passionate AI/ML enthusiast with hands-on experience in real-world projects, committed to delivering innovative and impactful solutions. Strong analytical and problem-solving skills with a focus on driving measurable results. Seeking opportunities to contribute to challenging AI/ML initiatives in dynamic environments
         </p>
         <div className="w-24 h-1 mx-auto bg-gradient-to-r from-indigo-400 to-cyan-400 rounded-full"></div>
       </motion.div>
@@ -86,13 +85,12 @@ export default function About() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
+            "ML System Design",
             "Computer Vision",
+            "NLP",
             "Deep Learning",
-            "Remote Sensing (SAR/Optical)",
             "Transformer Models",
             "Model Optimization",
-            "ML System Design",
-            "Image-to-Image Translation"
           ].map((area) => (
             <div
               key={area}
@@ -150,13 +148,9 @@ export default function About() {
 
         <ul className="grid md:grid-cols-2 gap-3 text-slate-300">
           {[
-            "Computer Vision Research",
-            "Remote Sensing & Satellite Imaging",
-            "Model Compression",
-            "AI Architecture Design",
-            "Reading Tech Blogs",
-            "Chess",
-            "Sprinting"
+            "Playing Chess",
+            "Sprinting",
+            "Researching General Information"
           ].map((item) => (
             <li
               key={item}
@@ -211,7 +205,6 @@ export default function About() {
         <ul className="grid md:grid-cols-2 gap-3 text-slate-300">
           {[
             "Strong Problem-Solving Skills",
-            "Hands-on AI Research & Development",
             "Quick Learner & Adaptive",
             "Team Collaboration",
             "Detail-Oriented Approach",

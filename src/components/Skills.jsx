@@ -5,12 +5,12 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function Skills() {
   // Skill list with icons
   const skills = [
-    { id: 1, label: "Python", pct: 95, icon: "/src/assets/skills/python.jpeg" },
-    { id: 2, label: "PyTorch", pct: 88, icon: "/src/assets/skills/pytorch.png" },
+    { id: 1, label: "Python", pct: 85, icon: "/src/assets/skills/python.jpeg" },
+    { id: 2, label: "PyTorch", pct: 50, icon: "/src/assets/skills/pytorch.png" },
     { id: 3, label: "C", pct: 75, icon: "/src/assets/skills/C.png" },
     { id: 4, label: "MongoDB", pct: 70, icon: "/src/assets/skills/mongodb.png" },
     { id: 5, label: "SQL", pct: 80, icon: "/src/assets/skills/SQL.png" },
-    { id: 6, label: "Computer Vision", pct: 85, icon: "/src/assets/skills/cv.png" },
+    { id: 6, label: "Computer Vision", pct: 75, icon: "/src/assets/skills/cv.png" },
     { id: 7, label: "FastAPI", pct: 78, icon: "/src/assets/skills/Fastapi.png" },
     { id: 8, label: "HTML", pct: 65, icon: "/src/assets/skills/html.png" },
     { id: 9, label: "Jupyter", pct: 65, icon: "/src/assets/skills/jupyter.png" },
@@ -18,7 +18,7 @@ export default function Skills() {
     { id: 11, label: "Streamlit", pct: 65, icon: "/src/assets/skills/streamlit.png" },
     { id: 12, label: "VS Code", pct: 65, icon: "/src/assets/skills/vs.jpeg" },
     { id: 13, label: "Pandas", pct: 65, icon: "/src/assets/skills/pandas.png" },
-    { id: 14, label: "Machine Learning", pct: 65, icon: "/src/assets/skills/ML.jpeg" },
+    { id: 14, label: "Machine Learning", pct: 80, icon: "/src/assets/skills/ML.jpeg" },
     { id: 15, label: "Matplotlib", pct: 65, icon: "/src/assets/skills/matplot.png" },
   ];
 
